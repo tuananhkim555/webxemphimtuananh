@@ -58,12 +58,12 @@ const SeatBookingPage = () => {
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-900 text-white">
-      <div className="flex-1 p-8">
-        <div className="max-w-4xl mx-auto bg-gray-800 p-6 rounded-lg shadow-lg">
+      <div className="flex-1 p-4 sm:p-8">
+        <div className="max-w-4xl mx-auto bg-gray-800 p-4 sm:p-6 rounded-lg shadow-lg">
           {/* Thông tin phim */}
-          <h1 className="text-3xl font-bold mb-4">Thông tin phim</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold mb-4">Thông tin phim</h1>
           <div className="mb-4">
-            <label className="block text-xl">Họ tên:</label>
+            <label className="block text-lg sm:text-xl">Họ tên:</label>
             <input
               type="text"
               name="fullName"
@@ -74,7 +74,7 @@ const SeatBookingPage = () => {
             />
           </div>
           <div className="mb-4">
-            <label className="block text-xl">Tên phim:</label>
+            <label className="block text-lg sm:text-xl">Tên phim:</label>
             <input
               type="text"
               name="name"
@@ -86,7 +86,7 @@ const SeatBookingPage = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-xl">Ngày chiếu:</label>
+            <label className="block text-lg sm:text-xl">Ngày chiếu:</label>
             <input
               type="date"
               name="date"
@@ -97,7 +97,7 @@ const SeatBookingPage = () => {
           </div>
 
           <div className="mb-4">
-            <label className="block text-xl">Giờ chiếu:</label>
+            <label className="block text-lg sm:text-xl">Giờ chiếu:</label>
             <input
               type="time"
               name="time"
@@ -109,12 +109,12 @@ const SeatBookingPage = () => {
 
           {/* Chọn ghế */}
           <h2 className="text-xl font-semibold mb-4">Chọn ghế</h2>
-          <div className="grid grid-cols-10 gap-2 mb-4 text-sm">
+          <div className="grid grid-cols-5 sm:grid-cols-10 gap-2 mb-4 text-xs sm:text-sm">
             {seats.map((seat) => (
               <div
                 key={seat.id}
                 onClick={() => handleSeatClick(seat)}
-                className={`p-2 text-center rounded-lg cursor-pointer ${
+                className={`p-1 sm:p-2 text-center rounded-lg cursor-pointer ${
                   seat.booked
                     ? 'bg-red-500 cursor-not-allowed'
                     : selectedSeats.includes(seat.name)
@@ -129,10 +129,10 @@ const SeatBookingPage = () => {
 
           {/* Hiển thị các ghế đã chọn */}
           <div className="mb-4">
-            <h3 className="text-xl font-semibold mb-2">Ghế đã chọn:</h3>
+            <h3 className="text-lg sm:text-xl font-semibold mb-2">Ghế đã chọn:</h3>
             <div className="flex flex-wrap gap-2">
               {selectedSeats.map(seat => (
-                <span key={seat} className="p-2 bg-red-500 text-white rounded-lg">{seat}</span>
+                <span key={seat} className="p-1 sm:p-2 bg-red-500 text-white rounded-lg text-xs sm:text-sm">{seat}</span>
               ))}
             </div>
           </div>
