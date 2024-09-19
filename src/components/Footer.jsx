@@ -2,7 +2,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-950 text-white p-20 text-center w-full mt-auto">
+    <footer className=" text-white p-20 text-center w-full mt-auto">
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center">
           {/* Logo và thông tin liên hệ */}
